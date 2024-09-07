@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+:root {
+  --border: 2px solid #6c6f85;
+}
+
 html,
 body {
   height: max-content; /* Make sure html and body take full viewport height */
@@ -64,17 +68,20 @@ h2 {
   flex-direction: row;
   border: solid #1e1e2e 1px;
   border-radius: 5px;
-  gap: 5px;
+  gap: 10px;
 }
 
 .classLine .classNumber {
   grid-column: 1;
   text-align: center;
+  padding-right: 5px;
   align-content: center;
   grid-row: 1 / span 2;
+  border-right: 1px solid black;
 }
 .classLine .className {
   grid-column: 3 / span 3;
+  border-bottom: 1px solid black;
 }
 
 .classLine .classTime {
@@ -174,6 +181,7 @@ h2 {
 }
 
 .weekName {
+  margin-top: 10px;
   background: #89b4fa;
   font-size: 20pt;
   width: 450px;
@@ -181,4 +189,56 @@ h2 {
   text-align: center;
   text-justify: center;
   border-radius: 10px;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .classLine {
+    grid-template-columns: 1fr 2fr 2fr 2fr 1fr;
+    font-size: 12pt;
+  }
+
+  .weekday,
+  .weekName {
+    font-size: 16pt;
+  }
+
+  .classLine .classNumber,
+  .classLine .classTime,
+  .classLine .className,
+  .classLine .classTeacher,
+  .classLine .classroom {
+    font-size: 12pt;
+  }
+
+  .buttonBox {
+    width: 90%;
+  }
+
+  .submit,
+  .button,
+  .reset,
+  .weekButton,
+  .nextWeekButton {
+    font-size: 12pt;
+    height: 30px;
+  }
+
+  .studentData {
+    width: 95%;
+  }
+
+  .studentData .groupName, .studentData .subgroup {
+    width: 45%;
+    font-size: 10pt;
+  }
+
+  .weekName {
+    margin-top: 10px;
+    width: 100%;
+  }
+
+  .classLine {
+    width: 100%;
+  }
 }
