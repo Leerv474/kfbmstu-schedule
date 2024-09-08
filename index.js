@@ -144,13 +144,8 @@ if (currentPage.includes("home.html") || currentPage === "/") {
         if (data.data && data.data.length > 0) {
           populateSchedule(data);
         } else {
-          if (data.weekday == 7) {
-            classesContainer.innerHTML = "<p class='message'>Выходной :)</p>";
-            weekdayElement.innerHTML = `${weekdays[data.weekday - 1]}`;
-          } else {
-            classesContainer.innerHTML =
-              "<p class='message'>Что-то пошло не так :(</p>";
-          }
+          classesContainer.innerHTML = "<p class='message'>Выходной :)</p>";
+          weekdayElement.innerHTML = `${weekdays[data.weekday - 1]}`;
         }
       })
       .catch((error) => {

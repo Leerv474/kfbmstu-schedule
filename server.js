@@ -69,11 +69,12 @@ app.get("/classes/today", (req, res) => {
 });
 
 app.get("/classes/tomorrow", (req, res) => {
-  const tomorrow = getCurrentWeekday() + 1;
+  let tomorrow = getCurrentWeekday() + 1;
+  let currentWeekNumber = getCurrentWeekNumber();
   if (tomorrow > 7) {
     tomorrow = 1;
+    currentWeekNumber = currentWeekNumber == 1 ? 2 : 1;
   }
-  const currentWeekNumber = getCurrentWeekNumber();
   const groupName = req.query.groupName;
   const subgroup = parseInt(req.query.subgroup, 10);
 
