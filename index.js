@@ -157,15 +157,6 @@ if (currentPage.includes("home.html") || currentPage === "/") {
       "<p>Missing group name or subgroup in URL parameters.</p>";
   }
 
-  const weekdays = [
-    "понедельник",
-    "вторник",
-    "среда",
-    "четверг",
-    "пятница",
-    "суббота",
-    "воскресенье",
-  ];
   const populateSchedule = (data) => {
     const classes = data.data;
     const weekday = data.weekday;
@@ -284,16 +275,6 @@ if (currentPage.includes("home.html") || currentPage === "/") {
       "<p>Missing group name or subgroup in URL parameters.</p>";
   }
 
-  const weekdays = [
-    "Понедельник",
-    "Вторник",
-    "Среда",
-    "Четверг",
-    "Пятница",
-    "Суббота",
-    "Воскресенье",
-  ];
-
   const populateSchedule = (data) => {
     const weekSchedule = data.data;
 
@@ -345,6 +326,15 @@ if (currentPage.includes("home.html") || currentPage === "/") {
   }
 }
 
+const weekdays = [
+  "Понедельник",
+  "Вторник",
+  "Среда",
+  "Четверг",
+  "Пятница",
+  "Суббота",
+  "Воскресенье",
+];
 const getClassTime = (classNumber) => {
   const classTimes = {
     1: ["08:30", "10:05"],

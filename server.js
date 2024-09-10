@@ -63,7 +63,9 @@ app.get("/classes/today", (req, res) => {
       if (err) {
         return res.status(500).json({ error: err.message });
       }
-      res.json({ weekday: today, data: rows });
+      let daySchedule = rows
+      daySchedule.sort((a, b) => a.class_number - b.class_number);
+      res.json({ weekday: today, data: daySchedule });
     },
   );
 });
@@ -93,7 +95,9 @@ app.get("/classes/tomorrow", (req, res) => {
       if (err) {
         return res.status(500).json({ error: err.message });
       }
-      res.json({ weekday: tomorrow, data: rows });
+      let daySchedule = rows
+      daySchedule.sort((a, b) => a.class_number - b.class_number);
+      res.json({ weekday: tomorrow, data: daySchedule });
     },
   );
 });
