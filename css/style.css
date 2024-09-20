@@ -13,6 +13,7 @@ body {
   height: max-content; /* Make sure html and body take full viewport height */
   margin: 0; /* Remove default margin */
   width: 100%; /* Ensure full width */
+  background: #313244;
 }
 
 body {
@@ -37,6 +38,18 @@ h2 {
   color: #11111b;
   width: 500px;
   text-align: center;
+  text-justify: center;
+  width: 100%;
+  margin-bottom: 5px;
+}
+
+h2 a {
+  background: #fab387;
+  border-radius: 10px;
+  color: #11111b;
+  width: 500px;
+  text-align: center;
+  text-decoration: none;
   text-justify: center;
   width: 100%;
   margin-bottom: 5px;
@@ -243,3 +256,4 @@ h2 {
     width: 100%;
   }
 }
+
